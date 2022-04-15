@@ -9,23 +9,41 @@
 /* Begin PBXBuildFile section */
 		90036B3E26F5028B0016F1F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B3D26F5028B0016F1F1 /* AppDelegate.swift */; };
 		90036B4026F5028B0016F1F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B3F26F5028B0016F1F1 /* SceneDelegate.swift */; };
-		90036B4226F5028B0016F1F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B4126F5028B0016F1F1 /* ViewController.swift */; };
-		90036B4526F5028B0016F1F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90036B4326F5028B0016F1F1 /* Main.storyboard */; };
+		90036B4226F5028B0016F1F1 /* JournalHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B4126F5028B0016F1F1 /* JournalHeaderView.swift */; };
 		90036B4826F5028B0016F1F1 /* Dream.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90036B4626F5028B0016F1F1 /* Dream.xcdatamodeld */; };
 		90036B4A26F502910016F1F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90036B4926F502910016F1F1 /* Assets.xcassets */; };
-		90036B4D26F502910016F1F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90036B4B26F502910016F1F1 /* LaunchScreen.storyboard */; };
+		90036B5626F7FD660016F1F1 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B5526F7FD650016F1F1 /* ColorExtension.swift */; };
+		90036B5926F8629F0016F1F1 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B5826F8629F0016F1F1 /* SearchView.swift */; };
+		90036B5B26F862BE0016F1F1 /* AlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B5A26F862BE0016F1F1 /* AlarmView.swift */; };
+		90036B5D26F862CB0016F1F1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B5C26F862CB0016F1F1 /* SettingsView.swift */; };
+		90036B6326F98F960016F1F1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B6226F98F960016F1F1 /* TabBarController.swift */; };
+		90036B6526F99C900016F1F1 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B6426F99C900016F1F1 /* ImageExtension.swift */; };
+		90036B6726FB02D20016F1F1 /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B6626FB02D20016F1F1 /* JournalViewController.swift */; };
+		90036B6926FB03C70016F1F1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B6826FB03C70016F1F1 /* SearchViewController.swift */; };
+		90036B6B26FB040B0016F1F1 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B6A26FB040B0016F1F1 /* AlarmViewController.swift */; };
+		90036B6D26FB04240016F1F1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B6C26FB04240016F1F1 /* SettingsViewController.swift */; };
+		9051067827FEC7BF0024C187 /* JournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9051067727FEC7BF0024C187 /* JournalTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		90036B3A26F5028B0016F1F1 /* Dream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90036B3D26F5028B0016F1F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90036B3F26F5028B0016F1F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		90036B4126F5028B0016F1F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		90036B4426F5028B0016F1F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		90036B4126F5028B0016F1F1 /* JournalHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalHeaderView.swift; sourceTree = "<group>"; };
 		90036B4726F5028B0016F1F1 /* Dream.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Dream.xcdatamodel; sourceTree = "<group>"; };
 		90036B4926F502910016F1F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		90036B4C26F502910016F1F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90036B4E26F502910016F1F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90036B5526F7FD650016F1F1 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		90036B5826F8629F0016F1F1 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		90036B5A26F862BE0016F1F1 /* AlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmView.swift; sourceTree = "<group>"; };
+		90036B5C26F862CB0016F1F1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		90036B6226F98F960016F1F1 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		90036B6426F99C900016F1F1 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		90036B6626FB02D20016F1F1 /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
+		90036B6826FB03C70016F1F1 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		90036B6A26FB040B0016F1F1 /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
+		90036B6C26FB04240016F1F1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		9051067727FEC7BF0024C187 /* JournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JournalTableViewCell.swift; path = ../../../../../stephanie/Downloads/Dream/Dream/View/JournalTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +78,63 @@
 			children = (
 				90036B3D26F5028B0016F1F1 /* AppDelegate.swift */,
 				90036B3F26F5028B0016F1F1 /* SceneDelegate.swift */,
-				90036B4126F5028B0016F1F1 /* ViewController.swift */,
-				90036B4326F5028B0016F1F1 /* Main.storyboard */,
+				90036B6026F862EC0016F1F1 /* Model */,
+				90036B5E26F862D70016F1F1 /* View */,
+				90036B6126F98DAC0016F1F1 /* Controller */,
+				90036B5426F7FD4A0016F1F1 /* Extensions */,
 				90036B4926F502910016F1F1 /* Assets.xcassets */,
-				90036B4B26F502910016F1F1 /* LaunchScreen.storyboard */,
 				90036B4E26F502910016F1F1 /* Info.plist */,
 				90036B4626F5028B0016F1F1 /* Dream.xcdatamodeld */,
 			);
 			path = Dream;
+			sourceTree = "<group>";
+		};
+		90036B5426F7FD4A0016F1F1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				90036B5526F7FD650016F1F1 /* ColorExtension.swift */,
+				90036B6426F99C900016F1F1 /* ImageExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		90036B5E26F862D70016F1F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				90036B4126F5028B0016F1F1 /* JournalHeaderView.swift */,
+				90036B5826F8629F0016F1F1 /* SearchView.swift */,
+				90036B5A26F862BE0016F1F1 /* AlarmView.swift */,
+				90036B5C26F862CB0016F1F1 /* SettingsView.swift */,
+				9051067727FEC7BF0024C187 /* JournalTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		90036B6026F862EC0016F1F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		90036B6126F98DAC0016F1F1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				90036B6226F98F960016F1F1 /* TabBarController.swift */,
+				90250D0F26FC3AFD00C0122D /* Journal */,
+				90036B6826FB03C70016F1F1 /* SearchViewController.swift */,
+				90036B6A26FB040B0016F1F1 /* AlarmViewController.swift */,
+				90036B6C26FB04240016F1F1 /* SettingsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		90250D0F26FC3AFD00C0122D /* Journal */ = {
+			isa = PBXGroup;
+			children = (
+				90036B6626FB02D20016F1F1 /* JournalViewController.swift */,
+			);
+			path = Journal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,6 +147,7 @@
 				90036B3626F5028B0016F1F1 /* Sources */,
 				90036B3726F5028B0016F1F1 /* Frameworks */,
 				90036B3826F5028B0016F1F1 /* Resources */,
+				90036B5726F804B70016F1F1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -128,46 +196,56 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90036B4D26F502910016F1F1 /* LaunchScreen.storyboard in Resources */,
 				90036B4A26F502910016F1F1 /* Assets.xcassets in Resources */,
-				90036B4526F5028B0016F1F1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		90036B5726F804B70016F1F1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		90036B3626F5028B0016F1F1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90036B4226F5028B0016F1F1 /* ViewController.swift in Sources */,
+				90036B6526F99C900016F1F1 /* ImageExtension.swift in Sources */,
+				90036B4226F5028B0016F1F1 /* JournalHeaderView.swift in Sources */,
+				90036B5D26F862CB0016F1F1 /* SettingsView.swift in Sources */,
+				90036B6726FB02D20016F1F1 /* JournalViewController.swift in Sources */,
 				90036B3E26F5028B0016F1F1 /* AppDelegate.swift in Sources */,
+				90036B6B26FB040B0016F1F1 /* AlarmViewController.swift in Sources */,
+				90036B6326F98F960016F1F1 /* TabBarController.swift in Sources */,
 				90036B4026F5028B0016F1F1 /* SceneDelegate.swift in Sources */,
+				90036B6926FB03C70016F1F1 /* SearchViewController.swift in Sources */,
 				90036B4826F5028B0016F1F1 /* Dream.xcdatamodeld in Sources */,
+				9051067827FEC7BF0024C187 /* JournalTableViewCell.swift in Sources */,
+				90036B6D26FB04240016F1F1 /* SettingsViewController.swift in Sources */,
+				90036B5926F8629F0016F1F1 /* SearchView.swift in Sources */,
+				90036B5B26F862BE0016F1F1 /* AlarmView.swift in Sources */,
+				90036B5626F7FD660016F1F1 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		90036B4326F5028B0016F1F1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				90036B4426F5028B0016F1F1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		90036B4B26F502910016F1F1 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				90036B4C26F502910016F1F1 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		90036B4F26F502910016F1F1 /* Debug */ = {
@@ -296,9 +374,9 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.stephaniechiu.Dream;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Dream;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -314,9 +392,9 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.stephaniechiu.Dream;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Dream;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -1,5 +1,5 @@
 //
-//  JournalView.swift
+//  JournalHeaderView.swift
 //  Dream
 //
 //  Created by Stephanie Chiu on 9/17/21.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class JournalView: UIView {
+class JournalHeaderView: UIView {
 
 	// MARK: - Constants
 
@@ -60,13 +60,6 @@ class JournalView: UIView {
 		return image
 	}()
 
-	let tableView: UITableView = {
-		let tableView = UITableView()
-		tableView.translatesAutoresizingMaskIntoConstraints = false
-		tableView.tableFooterView = UIView()
-		return tableView
-	}()
-
 	// MARK: - Init
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -83,36 +76,30 @@ class JournalView: UIView {
 		NSLayoutConstraint.activate(
 			[
 				// Header
-				headerContainer.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
-				headerContainer.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 40),
-				headerContainer.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: 20),
-				headerContainer.heightAnchor.constraint(equalToConstant: 300),
-
-				mainHeaderLabel.leadingAnchor.constraint(equalTo: headerContainer.leadingAnchor),
-				mainHeaderLabel.topAnchor.constraint(equalTo: headerContainer.topAnchor),
-
-				dateHeaderLabel.leadingAnchor.constraint(equalTo: headerContainer.leadingAnchor),
-				dateHeaderLabel.topAnchor.constraint(equalTo: mainHeaderLabel.bottomAnchor, constant: 8),
+//				headerContainer.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
+//				headerContainer.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 40),
+//				headerContainer.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: 20),
+//				headerContainer.heightAnchor.constraint(equalToConstant: 160),
+//
+//				mainHeaderLabel.leadingAnchor.constraint(equalTo: headerContainer.leadingAnchor),
+//				mainHeaderLabel.topAnchor.constraint(equalTo: headerContainer.topAnchor),
+//
+//				dateHeaderLabel.leadingAnchor.constraint(equalTo: headerContainer.leadingAnchor),
+//				dateHeaderLabel.topAnchor.constraint(equalTo: mainHeaderLabel.bottomAnchor, constant: 8),
 
 				// Floating audio button
-				audioContainer.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20),
-				audioContainer.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -16),
-				audioContainer.widthAnchor.constraint(equalToConstant: 48),
-				audioContainer.heightAnchor.constraint(equalToConstant: 48),
-
-				audioButton.centerYAnchor.constraint(equalTo: audioContainer.centerYAnchor),
-				audioButton.centerXAnchor.constraint(equalTo: audioContainer.centerXAnchor),
-				audioButton.widthAnchor.constraint(equalToConstant: 48),
-				audioButton.heightAnchor.constraint(equalToConstant: 48),
-
-				audioImage.centerYAnchor.constraint(equalTo: audioContainer.centerYAnchor),
-				audioImage.centerXAnchor.constraint(equalTo: audioContainer.centerXAnchor),
-
-				// Table View
-				tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
-				tableView.topAnchor.constraint(equalTo: topAnchor),
-				tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
-				tableView.bottomAnchor.constraint(equalTo: bottomAnchor)
+//				audioContainer.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20),
+//				audioContainer.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -16),
+//				audioContainer.widthAnchor.constraint(equalToConstant: 48),
+//				audioContainer.heightAnchor.constraint(equalToConstant: 48),
+//
+//				audioButton.centerYAnchor.constraint(equalTo: audioContainer.centerYAnchor),
+//				audioButton.centerXAnchor.constraint(equalTo: audioContainer.centerXAnchor),
+//				audioButton.widthAnchor.constraint(equalToConstant: 48),
+//				audioButton.heightAnchor.constraint(equalToConstant: 48),
+//
+//				audioImage.centerYAnchor.constraint(equalTo: audioContainer.centerYAnchor),
+//				audioImage.centerXAnchor.constraint(equalTo: audioContainer.centerXAnchor)
 			]
 		)
 	}
@@ -122,11 +109,11 @@ class JournalView: UIView {
 		headerContainer.addSubview(mainHeaderLabel)
 		headerContainer.addSubview(dateHeaderLabel)
 
-		addSubview(audioContainer)
-		audioContainer.addSubview(audioButton)
-		audioButton.addSubview(audioImage)
+//		addSubview(audioContainer)
+//		audioContainer.addSubview(audioButton)
+//		audioButton.addSubview(audioImage)
 
-		addSubview(tableView)
+//		addSubview(tableView)
 	}
 
 	func setBlurEffect() {

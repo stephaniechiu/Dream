@@ -1,14 +1,14 @@
 //
-//  AlarmController.swift
+//  AlarmViewController.swift
 //  Dream
 //
-//  Created by Stephanie on 9/21/21.
+//  Created by Stephanie Chiu on 9/21/21.
 //  Copyright © 2021 Stephanie Chiu. All rights reserved.
 //
 
 import UIKit
 
-class AlarmController: UIViewController {
+class AlarmViewController: UIViewController {
 
 	// MARK: - Properties
 

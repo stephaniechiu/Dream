@@ -8,7 +8,7 @@
 
 import UIKit
 
-class JournalViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class JournalViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
 	// MARK: - Properties
 
@@ -51,36 +51,48 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
 		return view
 	}()
 
-    let cellID = "cellID"
-    var data: [String] = ["dog", "cow", "mouse"]
-//	var tableViewDataSource: JournalTableViewDataSource?
-//	var tableViewDelegate: JournalTableViewDelegate?
+    var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
 
-	// MARK: - Lifestyle
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        return collectionView
+    }()
+
+
+    var data: [String] = ["dog", "cow", "mouse"]
+
+	// MARK: - Life Cycle
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-//		view = journalHeaderView
-		setupTableView()
+		setupCollectionView()
 	}
 
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 	}
 
-	func setupTableView() {
+    func addSubviews() {
+        view.addSubview(headerContainer)
+        headerContainer.addSubview(mainHeaderLabel)
+        headerContainer.addSubview(dateHeaderLabel)
+
+        view.addSubview(containerView)
+        containerView.addSubview(collectionView)
+    }
+
+	func setupCollectionView() {
 		addSubviews()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
-        tableView.delegate = self
-        tableView.dataSource = self
-//
-//		tableView.delegate = tableViewDelegate
-//		tableView.dataSource = tableViewDataSource
-//		tableView.translatesAutoresizingMaskIntoConstraints = false
-//		journalHeaderView.translatesAutoresizingMaskIntoConstraints = false
+
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.dataSource = self
+        collectionView.delegate = self
 
 		NSLayoutConstraint.activate(
 			[
+                // Header
 				headerContainer.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
 				headerContainer.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40),
 				headerContainer.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
@@ -91,45 +103,33 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
 				dateHeaderLabel.leadingAnchor.constraint(equalTo: headerContainer.leadingAnchor),
 				dateHeaderLabel.topAnchor.constraint(equalTo: mainHeaderLabel.bottomAnchor, constant: 8),
 
-				// Table view
+				// Collection View
 				containerView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
 				containerView.topAnchor.constraint(equalTo: headerContainer.bottomAnchor),
 				containerView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
 				containerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
 
-				tableView.topAnchor.constraint(equalTo: containerView.topAnchor),
-				tableView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-				tableView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
-				tableView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor)
+				collectionView.topAnchor.constraint(equalTo: containerView.topAnchor),
+				collectionView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+				collectionView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
+				collectionView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor)
 			]
 		)
-	}
-
-	func addSubviews() {
-		view.addSubview(headerContainer)
-		headerContainer.addSubview(mainHeaderLabel)
-		headerContainer.addSubview(dateHeaderLabel)
-
-		view.addSubview(containerView)
-		containerView.addSubview(tableView)
 	}
 
 	func selectedCell(row: Int) {
 		print("Row: \(row)")
 	}
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
-        cell.textLabel?.text = data[indexPath.row]
-
-        return cell
-    }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    // MARK: - CollectionView Data Source
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return data.count
     }
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("You tapped cell number \(indexPath.row).")
+    // MARK: - CollectionView Delegate
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        cell.contentView.backgroundColor = .orange
+        return cell
     }
 }

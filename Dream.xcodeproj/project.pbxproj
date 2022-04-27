@@ -19,9 +19,9 @@
 		90036B6326F98F960016F1F1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B6226F98F960016F1F1 /* TabBarController.swift */; };
 		90036B6526F99C900016F1F1 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B6426F99C900016F1F1 /* ImageExtension.swift */; };
 		90036B6726FB02D20016F1F1 /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B6626FB02D20016F1F1 /* JournalViewController.swift */; };
-		90036B6926FB03C70016F1F1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B6826FB03C70016F1F1 /* SearchViewController.swift */; };
+		90036B6926FB03C70016F1F1 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B6826FB03C70016F1F1 /* SearchController.swift */; };
 		90036B6B26FB040B0016F1F1 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B6A26FB040B0016F1F1 /* AlarmViewController.swift */; };
-		90036B6D26FB04240016F1F1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B6C26FB04240016F1F1 /* SettingsViewController.swift */; };
+		90036B6D26FB04240016F1F1 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B6C26FB04240016F1F1 /* SettingsController.swift */; };
 		9051067827FEC7BF0024C187 /* JournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9051067727FEC7BF0024C187 /* JournalTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,10 +40,10 @@
 		90036B6226F98F960016F1F1 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		90036B6426F99C900016F1F1 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
 		90036B6626FB02D20016F1F1 /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
-		90036B6826FB03C70016F1F1 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		90036B6826FB03C70016F1F1 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchController.swift; path = ../../../../../../stephanie/Documents/Code/Dream/Dream/Controller/SearchController.swift; sourceTree = "<group>"; };
 		90036B6A26FB040B0016F1F1 /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
-		90036B6C26FB04240016F1F1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		9051067727FEC7BF0024C187 /* JournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JournalTableViewCell.swift; path = ../../../../../stephanie/Downloads/Dream/Dream/View/JournalTableViewCell.swift; sourceTree = "<group>"; };
+		90036B6C26FB04240016F1F1 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsController.swift; path = ../../../../../../stephanie/Documents/Code/Dream/Dream/Controller/SettingsController.swift; sourceTree = "<group>"; };
+		9051067727FEC7BF0024C187 /* JournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JournalTableViewCell.swift; path = ../../../../../../stephanie/Documents/Code/Dream/Dream/View/JournalTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +78,7 @@
 			children = (
 				90036B3D26F5028B0016F1F1 /* AppDelegate.swift */,
 				90036B3F26F5028B0016F1F1 /* SceneDelegate.swift */,
-				90036B6026F862EC0016F1F1 /* Model */,
+				901C2720281529EA0077F1A2 /* Model */,
 				90036B5E26F862D70016F1F1 /* View */,
 				90036B6126F98DAC0016F1F1 /* Controller */,
 				90036B5426F7FD4A0016F1F1 /* Extensions */,
@@ -110,31 +110,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		90036B6026F862EC0016F1F1 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		90036B6126F98DAC0016F1F1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				90036B6226F98F960016F1F1 /* TabBarController.swift */,
-				90250D0F26FC3AFD00C0122D /* Journal */,
-				90036B6826FB03C70016F1F1 /* SearchViewController.swift */,
+				90036B6626FB02D20016F1F1 /* JournalViewController.swift */,
+				90036B6826FB03C70016F1F1 /* SearchController.swift */,
 				90036B6A26FB040B0016F1F1 /* AlarmViewController.swift */,
-				90036B6C26FB04240016F1F1 /* SettingsViewController.swift */,
+				90036B6C26FB04240016F1F1 /* SettingsController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		90250D0F26FC3AFD00C0122D /* Journal */ = {
+		901C2720281529EA0077F1A2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				90036B6626FB02D20016F1F1 /* JournalViewController.swift */,
 			);
-			path = Journal;
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,10 +227,10 @@
 				90036B6B26FB040B0016F1F1 /* AlarmViewController.swift in Sources */,
 				90036B6326F98F960016F1F1 /* TabBarController.swift in Sources */,
 				90036B4026F5028B0016F1F1 /* SceneDelegate.swift in Sources */,
-				90036B6926FB03C70016F1F1 /* SearchViewController.swift in Sources */,
+				90036B6926FB03C70016F1F1 /* SearchController.swift in Sources */,
 				90036B4826F5028B0016F1F1 /* Dream.xcdatamodeld in Sources */,
 				9051067827FEC7BF0024C187 /* JournalTableViewCell.swift in Sources */,
-				90036B6D26FB04240016F1F1 /* SettingsViewController.swift in Sources */,
+				90036B6D26FB04240016F1F1 /* SettingsController.swift in Sources */,
 				90036B5926F8629F0016F1F1 /* SearchView.swift in Sources */,
 				90036B5B26F862BE0016F1F1 /* AlarmView.swift in Sources */,
 				90036B5626F7FD660016F1F1 /* ColorExtension.swift in Sources */,

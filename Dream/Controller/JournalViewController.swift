@@ -54,6 +54,9 @@ class JournalViewController: UIViewController, UICollectionViewDelegate, UIColle
     var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
+//        layout.minimumInteritemSpacing = 1
+//        layout.minimumLineSpacing = 1
 
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -67,7 +70,7 @@ class JournalViewController: UIViewController, UICollectionViewDelegate, UIColle
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		setupCollectionView()
+        setupCollectionView()
 	}
 
 	override func viewWillAppear(_ animated: Bool) {
@@ -123,13 +126,25 @@ class JournalViewController: UIViewController, UICollectionViewDelegate, UIColle
 
     // MARK: - CollectionView Data Source
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return data.count
     }
 
     // MARK: - CollectionView Delegate
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+//        cell.textLabel.text = String(indexPath.row + 1)
         cell.contentView.backgroundColor = .orange
         return cell
+    }
+}
+
+extension JournalViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+
+        return CGSize(width: collectionView.bounds.size.width - 16, height: 100)
     }
 }

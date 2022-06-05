@@ -22,7 +22,7 @@
 		90036B6926FB03C70016F1F1 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B6826FB03C70016F1F1 /* SearchController.swift */; };
 		90036B6B26FB040B0016F1F1 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B6A26FB040B0016F1F1 /* AlarmViewController.swift */; };
 		90036B6D26FB04240016F1F1 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B6C26FB04240016F1F1 /* SettingsController.swift */; };
-		9051067827FEC7BF0024C187 /* JournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9051067727FEC7BF0024C187 /* JournalTableViewCell.swift */; };
+		9051067827FEC7BF0024C187 /* JournalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9051067727FEC7BF0024C187 /* JournalCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +43,7 @@
 		90036B6826FB03C70016F1F1 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchController.swift; path = ../../../../../../stephanie/Documents/Code/Dream/Dream/Controller/SearchController.swift; sourceTree = "<group>"; };
 		90036B6A26FB040B0016F1F1 /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 		90036B6C26FB04240016F1F1 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsController.swift; path = ../../../../../../stephanie/Documents/Code/Dream/Dream/Controller/SettingsController.swift; sourceTree = "<group>"; };
-		9051067727FEC7BF0024C187 /* JournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JournalTableViewCell.swift; path = ../../../../../../stephanie/Documents/Code/Dream/Dream/View/JournalTableViewCell.swift; sourceTree = "<group>"; };
+		9051067727FEC7BF0024C187 /* JournalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JournalCollectionViewCell.swift; path = ../../../../../../stephanie/Documents/Code/Dream/Dream/View/JournalCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +105,7 @@
 				90036B5826F8629F0016F1F1 /* SearchView.swift */,
 				90036B5A26F862BE0016F1F1 /* AlarmView.swift */,
 				90036B5C26F862CB0016F1F1 /* SettingsView.swift */,
-				9051067727FEC7BF0024C187 /* JournalTableViewCell.swift */,
+				9051067727FEC7BF0024C187 /* JournalCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -229,7 +229,7 @@
 				90036B4026F5028B0016F1F1 /* SceneDelegate.swift in Sources */,
 				90036B6926FB03C70016F1F1 /* SearchController.swift in Sources */,
 				90036B4826F5028B0016F1F1 /* Dream.xcdatamodeld in Sources */,
-				9051067827FEC7BF0024C187 /* JournalTableViewCell.swift in Sources */,
+				9051067827FEC7BF0024C187 /* JournalCollectionViewCell.swift in Sources */,
 				90036B6D26FB04240016F1F1 /* SettingsController.swift in Sources */,
 				90036B5926F8629F0016F1F1 /* SearchView.swift in Sources */,
 				90036B5B26F862BE0016F1F1 /* AlarmView.swift in Sources */,

@@ -46,7 +46,6 @@ class JournalViewController: UIViewController, UICollectionViewDelegate, UIColle
 
 	let containerView: UIView = {
 		let view = UIView()
-		view.backgroundColor = .red
 		view.translatesAutoresizingMaskIntoConstraints = false
 		return view
 	}()
@@ -55,11 +54,10 @@ class JournalViewController: UIViewController, UICollectionViewDelegate, UIColle
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
-//        layout.minimumInteritemSpacing = 1
-//        layout.minimumLineSpacing = 1
 
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.backgroundColor = .clear
         return collectionView
     }()
 
@@ -92,6 +90,7 @@ class JournalViewController: UIViewController, UICollectionViewDelegate, UIColle
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.register(JournalCollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
 
 		NSLayoutConstraint.activate(
 			[
@@ -135,9 +134,7 @@ class JournalViewController: UIViewController, UICollectionViewDelegate, UIColle
 
     // MARK: - CollectionView Delegate
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-//        cell.textLabel.text = String(indexPath.row + 1)
-        cell.contentView.backgroundColor = .orange
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! JournalCollectionViewCell
         return cell
     }
 }

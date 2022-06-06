@@ -32,7 +32,7 @@ class JournalController: UIViewController, UICollectionViewDelegate, UICollectio
 		let label = UILabel()
 		label.font = UIFont(name: "Nunito", size: 16.0)
 		label.textColor = UIColor.darkBlueTint
-		label.text = "Sunday, September 19, 2021"
+		label.text = "Sunday, September 19, 2022"
 		label.translatesAutoresizingMaskIntoConstraints = false
 		return label
 	}()
@@ -62,18 +62,28 @@ class JournalController: UIViewController, UICollectionViewDelegate, UICollectio
     }()
 
 
-    var data: [String] = ["dog", "cow", "mouse"]
+    var data: [String] = ["dog", "cow", "mouse", "dog", "cow", "mouse", "dog", "cow", "mouse"]
 
 	// MARK: - Life Cycle
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
         setupCollectionView()
+        addGradient()
 	}
 
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 	}
+
+    func addGradient() {
+        let gradient = CAGradientLayer()
+        gradient.frame = view.bounds
+        gradient.masksToBounds = true
+        gradient.colors = [UIColor.clear.withAlphaComponent(0.0).cgColor, UIColor.clear.withAlphaComponent(1.0).cgColor]
+        gradient.locations = [0, 0.08]
+        containerView.layer.mask = gradient
+    }
 
     func addSubviews() {
         view.addSubview(headerContainer)
@@ -98,7 +108,8 @@ class JournalController: UIViewController, UICollectionViewDelegate, UICollectio
 				headerContainer.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
 				headerContainer.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40),
 				headerContainer.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-				headerContainer.heightAnchor.constraint(equalToConstant: 160),
+				headerContainer.heightAnchor.constraint(equalToConstant: 120),
+
 				mainHeaderLabel.leadingAnchor.constraint(equalTo: headerContainer.leadingAnchor),
 				mainHeaderLabel.topAnchor.constraint(equalTo: headerContainer.topAnchor),
 
@@ -107,7 +118,7 @@ class JournalController: UIViewController, UICollectionViewDelegate, UICollectio
 
 				// Collection View
 				containerView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-				containerView.topAnchor.constraint(equalTo: headerContainer.bottomAnchor),
+                containerView.topAnchor.constraint(equalTo: headerContainer.bottomAnchor),
 				containerView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
 				containerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
 

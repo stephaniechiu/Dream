@@ -57,7 +57,7 @@ class JournalCollectionViewCell: UICollectionViewCell {
         return label
     }()
 
-    let previewLabel: UILabel = {
+    let entryPreviewLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "Nunito", size: 12.0)
         label.font = label.font.withSize(12)
@@ -89,10 +89,10 @@ class JournalCollectionViewCell: UICollectionViewCell {
 
         addSubview(containerView)
         containerView.addSubview(dateStackView)
-        containerView.addSubview(previewLabel)
+        containerView.addSubview(timeLabel)
+        containerView.addSubview(entryPreviewLabel)
         dateStackView.addArrangedSubview(dayLabel)
         dateStackView.addArrangedSubview(monthLabel)
-        dateStackView.addArrangedSubview(timeLabel)
 
         NSLayoutConstraint.activate([
             containerView.topAnchor.constraint(equalTo: topAnchor),
@@ -104,10 +104,14 @@ class JournalCollectionViewCell: UICollectionViewCell {
             dateStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 16),
             dateStackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -16),
 
-            previewLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 16),
-            previewLabel.leadingAnchor.constraint(equalTo: dateStackView.trailingAnchor, constant: 8),
-            previewLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -16),
-            previewLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -16),
+            timeLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 20),
+            timeLabel.leadingAnchor.constraint(equalTo: dateStackView.trailingAnchor, constant: 8),
+            timeLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+
+            entryPreviewLabel.topAnchor.constraint(equalTo: timeLabel.topAnchor, constant: 16),
+            entryPreviewLabel.leadingAnchor.constraint(equalTo: dateStackView.trailingAnchor, constant: 8),
+            entryPreviewLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -16),
+            entryPreviewLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -16),
         ])
     }
 }

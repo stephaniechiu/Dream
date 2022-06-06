@@ -6,4 +6,17 @@
 //  Copyright © 2021 Stephanie Chiu. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class SearchController: UIViewController {
+    let searchView = SearchView()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view = searchView
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+}

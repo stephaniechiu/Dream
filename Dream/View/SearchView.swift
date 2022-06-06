@@ -8,10 +8,14 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class SearchView: UIView {
 
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		view.backgroundColor = .systemGreen
-	}
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        backgroundColor = .orange
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }

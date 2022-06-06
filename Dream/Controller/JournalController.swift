@@ -1,5 +1,5 @@
 //
-//  JournalViewController.swift
+//  JournalController.swift
 //  Dream
 //
 //  Created by Stephanie Chiu on 9/21/21.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class JournalViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class JournalController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
 	// MARK: - Properties
 
@@ -139,7 +139,7 @@ class JournalViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
 }
 
-extension JournalViewController: UICollectionViewDelegateFlowLayout {
+extension JournalController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
         return CGSize(width: collectionView.bounds.size.width - 16, height: 100)

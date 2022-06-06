@@ -12,10 +12,10 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
 
 	// MARK: - Constants
 
-	let journalViewController = JournalViewController()
-	let searchViewController = SearchViewController()
-	let alarmViewController = AlarmViewController()
-	let settingsViewController = SettingsViewController()
+	let journalViewController = JournalController()
+	let searchController = SearchController()
+	let alarmController = AlarmController()
+	let settingsController = SettingsController()
 
 	// MARK: - Lifecycle
 
@@ -40,15 +40,15 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
 		journalViewController.tabBarItem = journalTabBarItem
 
 		let searchTabBarItem = UITabBarItem(title: nil, image: UIImage(named: "search"), tag: 2)
-		searchViewController.tabBarItem = searchTabBarItem
+		searchController.tabBarItem = searchTabBarItem
 
 		let alarmTabBarItem = UITabBarItem(title: nil, image: UIImage(named: "alarm"), tag: 3)
-		alarmViewController.tabBarItem = alarmTabBarItem
+		alarmController.tabBarItem = alarmTabBarItem
 
 		let settingsTabBarItem = UITabBarItem(title: nil, image: UIImage(named: "settings"), tag: 4)
-		settingsViewController.tabBarItem = settingsTabBarItem
+		settingsController.tabBarItem = settingsTabBarItem
 
-		self.viewControllers = [journalViewController, searchViewController, alarmViewController, settingsViewController]
+		self.viewControllers = [journalViewController, searchController, alarmController, settingsController]
 	}
 
 	func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {

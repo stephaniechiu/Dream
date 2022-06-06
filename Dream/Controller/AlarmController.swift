@@ -1,5 +1,5 @@
 //
-//  AlarmViewController.swift
+//  AlarmController.swift
 //  Dream
 //
 //  Created by Stephanie Chiu on 9/21/21.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AlarmViewController: UIViewController {
+class AlarmController: UIViewController {
 
 	// MARK: - Properties
 

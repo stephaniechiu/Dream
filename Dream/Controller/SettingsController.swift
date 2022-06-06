@@ -6,4 +6,17 @@
 //  Copyright © 2021 Stephanie Chiu. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class SettingsController: UIViewController {
+    let settingsView = SettingsView()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view = settingsView
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+}

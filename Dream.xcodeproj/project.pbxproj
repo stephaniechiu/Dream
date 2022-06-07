@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		90036B3E26F5028B0016F1F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B3D26F5028B0016F1F1 /* AppDelegate.swift */; };
 		90036B4026F5028B0016F1F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B3F26F5028B0016F1F1 /* SceneDelegate.swift */; };
-		90036B4226F5028B0016F1F1 /* JournalHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B4126F5028B0016F1F1 /* JournalHeaderView.swift */; };
+		90036B4226F5028B0016F1F1 /* MicrophoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B4126F5028B0016F1F1 /* MicrophoneButton.swift */; };
 		90036B4826F5028B0016F1F1 /* Dream.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90036B4626F5028B0016F1F1 /* Dream.xcdatamodeld */; };
 		90036B4A26F502910016F1F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90036B4926F502910016F1F1 /* Assets.xcassets */; };
 		90036B5626F7FD660016F1F1 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B5526F7FD650016F1F1 /* ColorExtension.swift */; };
@@ -29,7 +29,7 @@
 		90036B3A26F5028B0016F1F1 /* Dream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90036B3D26F5028B0016F1F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90036B3F26F5028B0016F1F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		90036B4126F5028B0016F1F1 /* JournalHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalHeaderView.swift; sourceTree = "<group>"; };
+		90036B4126F5028B0016F1F1 /* MicrophoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrophoneButton.swift; sourceTree = "<group>"; };
 		90036B4726F5028B0016F1F1 /* Dream.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Dream.xcdatamodel; sourceTree = "<group>"; };
 		90036B4926F502910016F1F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90036B4E26F502910016F1F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 		90036B5E26F862D70016F1F1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				90036B4126F5028B0016F1F1 /* JournalHeaderView.swift */,
+				90036B4126F5028B0016F1F1 /* MicrophoneButton.swift */,
 				90036B5826F8629F0016F1F1 /* SearchView.swift */,
 				90036B5A26F862BE0016F1F1 /* AlarmView.swift */,
 				90036B5C26F862CB0016F1F1 /* SettingsView.swift */,
@@ -220,7 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90036B6526F99C900016F1F1 /* ImageExtension.swift in Sources */,
-				90036B4226F5028B0016F1F1 /* JournalHeaderView.swift in Sources */,
+				90036B4226F5028B0016F1F1 /* MicrophoneButton.swift in Sources */,
 				90036B5D26F862CB0016F1F1 /* SettingsView.swift in Sources */,
 				90036B6726FB02D20016F1F1 /* JournalController.swift in Sources */,
 				90036B3E26F5028B0016F1F1 /* AppDelegate.swift in Sources */,

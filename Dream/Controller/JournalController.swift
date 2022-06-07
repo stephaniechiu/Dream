@@ -50,7 +50,7 @@ class JournalController: UIViewController, UICollectionViewDelegate, UICollectio
 		return view
 	}()
 
-    var collectionView: UICollectionView = {
+    let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
@@ -61,6 +61,11 @@ class JournalController: UIViewController, UICollectionViewDelegate, UICollectio
         return collectionView
     }()
 
+    let microphoneButton: UIButton = {
+        let button = MicrophoneButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
 
     var data: [String] = ["dog", "cow", "mouse", "dog", "cow", "mouse", "dog", "cow", "mouse"]
 
@@ -68,22 +73,12 @@ class JournalController: UIViewController, UICollectionViewDelegate, UICollectio
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-        setupCollectionView()
-        addGradient()
+        addSubviews()
 	}
 
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 	}
-
-    func addGradient() {
-        let gradient = CAGradientLayer()
-        gradient.frame = view.bounds
-        gradient.masksToBounds = true
-        gradient.colors = [UIColor.clear.withAlphaComponent(0.0).cgColor, UIColor.clear.withAlphaComponent(1.0).cgColor]
-        gradient.locations = [0, 0.08]
-        containerView.layer.mask = gradient
-    }
 
     func addSubviews() {
         view.addSubview(headerContainer)
@@ -92,11 +87,38 @@ class JournalController: UIViewController, UICollectionViewDelegate, UICollectio
 
         view.addSubview(containerView)
         containerView.addSubview(collectionView)
+        view.addSubview(microphoneButton)
+        setupCollectionView()
+        addGradient()
+        addBlurEffect(on: collectionView)
+    }
+
+    func addGradient() {
+        let gradient = CAGradientLayer()
+        gradient.frame = view.bounds
+        gradient.masksToBounds = true
+        gradient.colors = [UIColor.clear.withAlphaComponent(0.3).cgColor, UIColor.clear.withAlphaComponent(1.0).cgColor]
+        gradient.locations = [0, 0.05]
+        containerView.layer.mask = gradient
+    }
+
+    func addBlurEffect(on view: UIView) {
+        let blurEffect = UIBlurEffect(style: .regular)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.translatesAutoresizingMaskIntoConstraints = false
+        blurEffectView.clipsToBounds = true
+        blurEffectView.layer.cornerRadius = 26
+        view.insertSubview(blurEffectView, at: 0)
+
+        NSLayoutConstraint.activate([
+            blurEffectView.topAnchor.constraint(equalTo: microphoneButton.topAnchor),
+            blurEffectView.leadingAnchor.constraint(equalTo: microphoneButton.leadingAnchor),
+            blurEffectView.bottomAnchor.constraint(equalTo: microphoneButton.bottomAnchor),
+            blurEffectView.trailingAnchor.constraint(equalTo: microphoneButton.trailingAnchor),
+        ])
     }
 
 	func setupCollectionView() {
-		addSubviews()
-
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -125,7 +147,13 @@ class JournalController: UIViewController, UICollectionViewDelegate, UICollectio
 				collectionView.topAnchor.constraint(equalTo: containerView.topAnchor),
 				collectionView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
 				collectionView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
-				collectionView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor)
+				collectionView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+
+                // Button View
+                microphoneButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10),
+                microphoneButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+                microphoneButton.widthAnchor.constraint(equalToConstant: 52),
+                microphoneButton.heightAnchor.constraint(equalToConstant: 52),
 			]
 		)
 	}

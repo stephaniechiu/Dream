@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class JournalController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
@@ -61,11 +62,7 @@ class JournalController: UIViewController, UICollectionViewDelegate, UICollectio
         return collectionView
     }()
 
-    let microphoneButton: UIButton = {
-        let button = MicrophoneButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
+    let microphoneButton = MicrophoneButtonView()
 
     var data: [String] = ["dog", "cow", "mouse", "dog", "cow", "mouse", "dog", "cow", "mouse"]
 
@@ -74,11 +71,25 @@ class JournalController: UIViewController, UICollectionViewDelegate, UICollectio
 	override func viewDidLoad() {
 		super.viewDidLoad()
         addSubviews()
+        microphoneButtonLongPress()
 	}
 
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 	}
+
+    // MARK: - Functions
+
+    func microphoneButtonLongPress() {
+        let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(presentViewController(_:)))
+        microphoneButton.addGestureRecognizer(longPressRecognizer)
+    }
+
+    @objc func presentViewController(_ sender: UILongPressGestureRecognizer) {
+        let recordingController = RecordingController()
+        recordingController.modalPresentationStyle = .overCurrentContext
+        self.present(recordingController, animated: false)
+    }
 
     func addSubviews() {
         view.addSubview(headerContainer)

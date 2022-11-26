@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		90036B3E26F5028B0016F1F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B3D26F5028B0016F1F1 /* AppDelegate.swift */; };
 		90036B4026F5028B0016F1F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B3F26F5028B0016F1F1 /* SceneDelegate.swift */; };
-		90036B4226F5028B0016F1F1 /* MicrophoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B4126F5028B0016F1F1 /* MicrophoneButton.swift */; };
+		90036B4226F5028B0016F1F1 /* MicrophoneButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B4126F5028B0016F1F1 /* MicrophoneButtonView.swift */; };
 		90036B4826F5028B0016F1F1 /* Dream.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90036B4626F5028B0016F1F1 /* Dream.xcdatamodeld */; };
 		90036B4A26F502910016F1F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90036B4926F502910016F1F1 /* Assets.xcassets */; };
 		90036B5626F7FD660016F1F1 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B5526F7FD650016F1F1 /* ColorExtension.swift */; };
@@ -23,13 +23,15 @@
 		90036B6B26FB040B0016F1F1 /* AlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B6A26FB040B0016F1F1 /* AlarmController.swift */; };
 		90036B6D26FB04240016F1F1 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90036B6C26FB04240016F1F1 /* SettingsController.swift */; };
 		9051067827FEC7BF0024C187 /* JournalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9051067727FEC7BF0024C187 /* JournalCollectionViewCell.swift */; };
+		9073DD3F29318CCC00CF3253 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9073DD3E29318CCC00CF3253 /* SpeechRecognizer.swift */; };
+		9073DD4129319F6C00CF3253 /* RecordingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9073DD4029319F6C00CF3253 /* RecordingController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		90036B3A26F5028B0016F1F1 /* Dream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90036B3D26F5028B0016F1F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90036B3F26F5028B0016F1F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		90036B4126F5028B0016F1F1 /* MicrophoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrophoneButton.swift; sourceTree = "<group>"; };
+		90036B4126F5028B0016F1F1 /* MicrophoneButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrophoneButtonView.swift; sourceTree = "<group>"; };
 		90036B4726F5028B0016F1F1 /* Dream.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Dream.xcdatamodel; sourceTree = "<group>"; };
 		90036B4926F502910016F1F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90036B4E26F502910016F1F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,6 +46,8 @@
 		90036B6A26FB040B0016F1F1 /* AlarmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmController.swift; sourceTree = "<group>"; };
 		90036B6C26FB04240016F1F1 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsController.swift; path = ../../../../../../stephanie/Documents/Code/Dream/Dream/Controller/SettingsController.swift; sourceTree = "<group>"; };
 		9051067727FEC7BF0024C187 /* JournalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JournalCollectionViewCell.swift; path = ../../../../../../stephanie/Documents/Code/Dream/Dream/View/JournalCollectionViewCell.swift; sourceTree = "<group>"; };
+		9073DD3E29318CCC00CF3253 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpeechRecognizer.swift; path = ../../../../../../stephanie/Documents/Code/Dream/Dream/Model/SpeechRecognizer.swift; sourceTree = "<group>"; };
+		9073DD4029319F6C00CF3253 /* RecordingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecordingController.swift; path = ../../../../../../stephanie/Documents/Code/Dream/Dream/Controller/RecordingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +105,7 @@
 		90036B5E26F862D70016F1F1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				90036B4126F5028B0016F1F1 /* MicrophoneButton.swift */,
+				90036B4126F5028B0016F1F1 /* MicrophoneButtonView.swift */,
 				90036B5826F8629F0016F1F1 /* SearchView.swift */,
 				90036B5A26F862BE0016F1F1 /* AlarmView.swift */,
 				90036B5C26F862CB0016F1F1 /* SettingsView.swift */,
@@ -118,6 +122,7 @@
 				90036B6826FB03C70016F1F1 /* SearchController.swift */,
 				90036B6A26FB040B0016F1F1 /* AlarmController.swift */,
 				90036B6C26FB04240016F1F1 /* SettingsController.swift */,
+				9073DD4029319F6C00CF3253 /* RecordingController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 		901C2720281529EA0077F1A2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9073DD3E29318CCC00CF3253 /* SpeechRecognizer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -220,13 +226,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				90036B6526F99C900016F1F1 /* ImageExtension.swift in Sources */,
-				90036B4226F5028B0016F1F1 /* MicrophoneButton.swift in Sources */,
+				9073DD3F29318CCC00CF3253 /* SpeechRecognizer.swift in Sources */,
+				90036B4226F5028B0016F1F1 /* MicrophoneButtonView.swift in Sources */,
 				90036B5D26F862CB0016F1F1 /* SettingsView.swift in Sources */,
 				90036B6726FB02D20016F1F1 /* JournalController.swift in Sources */,
 				90036B3E26F5028B0016F1F1 /* AppDelegate.swift in Sources */,
 				90036B6B26FB040B0016F1F1 /* AlarmController.swift in Sources */,
 				90036B6326F98F960016F1F1 /* TabBarController.swift in Sources */,
 				90036B4026F5028B0016F1F1 /* SceneDelegate.swift in Sources */,
+				9073DD4129319F6C00CF3253 /* RecordingController.swift in Sources */,
 				90036B6926FB03C70016F1F1 /* SearchController.swift in Sources */,
 				90036B4826F5028B0016F1F1 /* Dream.xcdatamodeld in Sources */,
 				9051067827FEC7BF0024C187 /* JournalCollectionViewCell.swift in Sources */,

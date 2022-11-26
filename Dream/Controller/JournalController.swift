@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import Foundation
 
 class JournalController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
@@ -81,14 +82,19 @@ class JournalController: UIViewController, UICollectionViewDelegate, UICollectio
     // MARK: - Functions
 
     func microphoneButtonLongPress() {
-        let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(presentViewController(_:)))
+        let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(presentRecordingController(_:)))
         microphoneButton.addGestureRecognizer(longPressRecognizer)
     }
 
-    @objc func presentViewController(_ sender: UILongPressGestureRecognizer) {
+    @objc func presentRecordingController(_ sender: UILongPressGestureRecognizer) {
         let recordingController = RecordingController()
-        recordingController.modalPresentationStyle = .overCurrentContext
-        self.present(recordingController, animated: false)
+        if sender.state == .began {
+            recordingController.modalPresentationStyle = .overCurrentContext
+            self.present(recordingController, animated: false)
+        }
+        else if sender.state == .ended {
+            self.dismiss(animated: false)
+        }
     }
 
     func addSubviews() {

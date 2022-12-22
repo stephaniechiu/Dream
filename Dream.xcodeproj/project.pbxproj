@@ -25,9 +25,14 @@
 		9051067827FEC7BF0024C187 /* JournalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9051067727FEC7BF0024C187 /* JournalCollectionViewCell.swift */; };
 		9073DD3F29318CCC00CF3253 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9073DD3E29318CCC00CF3253 /* SpeechRecognizer.swift */; };
 		9073DD4129319F6C00CF3253 /* RecordingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9073DD4029319F6C00CF3253 /* RecordingController.swift */; };
+		9073DD432931C75800CF3253 /* DreamLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9073DD422931C75800CF3253 /* DreamLog.swift */; };
+		F3EF8FCDF5940E1379DDCC50 /* Pods_Dream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517C87237787E3DFD421E1AE /* Pods_Dream.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		26A02465694E72B2AE25BB7A /* Pods-Dream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dream.release.xcconfig"; path = "Target Support Files/Pods-Dream/Pods-Dream.release.xcconfig"; sourceTree = "<group>"; };
+		517C87237787E3DFD421E1AE /* Pods_Dream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DCA6A6FE3A9F86AEA0D040A /* Pods-Dream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dream.debug.xcconfig"; path = "Target Support Files/Pods-Dream/Pods-Dream.debug.xcconfig"; sourceTree = "<group>"; };
 		90036B3A26F5028B0016F1F1 /* Dream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90036B3D26F5028B0016F1F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90036B3F26F5028B0016F1F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +53,8 @@
 		9051067727FEC7BF0024C187 /* JournalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JournalCollectionViewCell.swift; path = ../../../../../../stephanie/Documents/Code/Dream/Dream/View/JournalCollectionViewCell.swift; sourceTree = "<group>"; };
 		9073DD3E29318CCC00CF3253 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpeechRecognizer.swift; path = ../../../../../../stephanie/Documents/Code/Dream/Dream/Model/SpeechRecognizer.swift; sourceTree = "<group>"; };
 		9073DD4029319F6C00CF3253 /* RecordingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecordingController.swift; path = ../../../../../../stephanie/Documents/Code/Dream/Dream/Controller/RecordingController.swift; sourceTree = "<group>"; };
+		9073DD422931C75800CF3253 /* DreamLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DreamLog.swift; path = ../../../../../../stephanie/Documents/Code/Dream/Dream/Model/DreamLog.swift; sourceTree = "<group>"; };
+		9073DD442932482100CF3253 /* MyLibrary */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MyLibrary; path = ../../../../stephanie/Documents/Code/Dream/MyLibrary; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,17 +62,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3EF8FCDF5940E1379DDCC50 /* Pods_Dream.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5CF8B227380F60DB4F360833 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				517C87237787E3DFD421E1AE /* Pods_Dream.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		90036B3126F5028A0016F1F1 = {
 			isa = PBXGroup;
 			children = (
+				9073DD442932482100CF3253 /* MyLibrary */,
 				90036B3C26F5028B0016F1F1 /* Dream */,
 				90036B3B26F5028B0016F1F1 /* Products */,
+				CFFB32FBB721366E485758BE /* Pods */,
+				5CF8B227380F60DB4F360833 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,8 +150,19 @@
 			isa = PBXGroup;
 			children = (
 				9073DD3E29318CCC00CF3253 /* SpeechRecognizer.swift */,
+				9073DD422931C75800CF3253 /* DreamLog.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CFFB32FBB721366E485758BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8DCA6A6FE3A9F86AEA0D040A /* Pods-Dream.debug.xcconfig */,
+				26A02465694E72B2AE25BB7A /* Pods-Dream.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,10 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90036B5126F502910016F1F1 /* Build configuration list for PBXNativeTarget "Dream" */;
 			buildPhases = (
+				EC4B02C091BF790DB8F58C2A /* [CP] Check Pods Manifest.lock */,
 				90036B3626F5028B0016F1F1 /* Sources */,
 				90036B3726F5028B0016F1F1 /* Frameworks */,
 				90036B3826F5028B0016F1F1 /* Resources */,
 				90036B5726F804B70016F1F1 /* ShellScript */,
+				3838321CD0A79C3B03143E10 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -201,6 +233,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3838321CD0A79C3B03143E10 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dream/Pods-Dream-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dream/Pods-Dream-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dream/Pods-Dream-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		90036B5726F804B70016F1F1 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -217,6 +266,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		EC4B02C091BF790DB8F58C2A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Dream-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -237,6 +308,7 @@
 				9073DD4129319F6C00CF3253 /* RecordingController.swift in Sources */,
 				90036B6926FB03C70016F1F1 /* SearchController.swift in Sources */,
 				90036B4826F5028B0016F1F1 /* Dream.xcdatamodeld in Sources */,
+				9073DD432931C75800CF3253 /* DreamLog.swift in Sources */,
 				9051067827FEC7BF0024C187 /* JournalCollectionViewCell.swift in Sources */,
 				90036B6D26FB04240016F1F1 /* SettingsController.swift in Sources */,
 				90036B5926F8629F0016F1F1 /* SearchView.swift in Sources */,
@@ -364,6 +436,7 @@
 		};
 		90036B5226F502910016F1F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DCA6A6FE3A9F86AEA0D040A /* Pods-Dream.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -382,6 +455,7 @@
 		};
 		90036B5326F502910016F1F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26A02465694E72B2AE25BB7A /* Pods-Dream.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -42,11 +42,6 @@ class RecordingController: UIViewController {
         super.viewWillAppear(animated)
     }
 
-    override func viewWillDisappear(_ animated: Bool) {
-        speechRecognizer.stopTranscribing()
-        isRecording = false
-    }
-
     func setupSubviews() {
         view.addSubview(backgroundView)
         backgroundView.addSubview(recordingView)
@@ -64,7 +59,6 @@ class RecordingController: UIViewController {
     func transcribeSpeech() {
         speechRecognizer.reset()
         speechRecognizer.transcribe()
-        isRecording = true
     }
 
 }

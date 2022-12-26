@@ -8,7 +8,8 @@
 
 import UIKit
 import AVFoundation
-import Foundation
+import Speech
+import SoundWave
 
 class JournalController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
@@ -71,12 +72,8 @@ class JournalController: UIViewController, UICollectionViewDelegate, UICollectio
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-        addSubviews()
         microphoneButtonLongPress()
-	}
-
-	override func viewWillAppear(_ animated: Bool) {
-		super.viewWillAppear(animated)
+        addSubviews()
 	}
 
     // MARK: - Functions
@@ -89,6 +86,7 @@ class JournalController: UIViewController, UICollectionViewDelegate, UICollectio
     @objc func presentRecordingController(_ sender: UILongPressGestureRecognizer) {
         let recordingController = RecordingController()
         if sender.state == .began {
+
             recordingController.modalPresentationStyle = .overCurrentContext
             self.present(recordingController, animated: false)
         }
@@ -105,7 +103,7 @@ class JournalController: UIViewController, UICollectionViewDelegate, UICollectio
         view.addSubview(containerView)
         containerView.addSubview(collectionView)
         view.addSubview(microphoneButton)
-        setupCollectionView()
+        setupSubviews()
         addGradient()
         addBlurEffect(on: collectionView)
     }
@@ -135,45 +133,45 @@ class JournalController: UIViewController, UICollectionViewDelegate, UICollectio
         ])
     }
 
-	func setupCollectionView() {
+    func setupSubviews() {
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(JournalCollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
-
-		NSLayoutConstraint.activate(
-			[
+        
+        NSLayoutConstraint.activate(
+            [
                 // Header
-				headerContainer.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-				headerContainer.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40),
-				headerContainer.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-				headerContainer.heightAnchor.constraint(equalToConstant: 120),
-
-				mainHeaderLabel.leadingAnchor.constraint(equalTo: headerContainer.leadingAnchor),
-				mainHeaderLabel.topAnchor.constraint(equalTo: headerContainer.topAnchor),
-
-				dateHeaderLabel.leadingAnchor.constraint(equalTo: headerContainer.leadingAnchor),
-				dateHeaderLabel.topAnchor.constraint(equalTo: mainHeaderLabel.bottomAnchor, constant: 8),
-
-				// Collection View
-				containerView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+                headerContainer.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+                headerContainer.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40),
+                headerContainer.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+                headerContainer.heightAnchor.constraint(equalToConstant: 120),
+                
+                mainHeaderLabel.leadingAnchor.constraint(equalTo: headerContainer.leadingAnchor),
+                mainHeaderLabel.topAnchor.constraint(equalTo: headerContainer.topAnchor),
+                
+                dateHeaderLabel.leadingAnchor.constraint(equalTo: headerContainer.leadingAnchor),
+                dateHeaderLabel.topAnchor.constraint(equalTo: mainHeaderLabel.bottomAnchor, constant: 8),
+                
+                // Collection View
+                containerView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
                 containerView.topAnchor.constraint(equalTo: headerContainer.bottomAnchor),
-				containerView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-				containerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-
-				collectionView.topAnchor.constraint(equalTo: containerView.topAnchor),
-				collectionView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-				collectionView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
-				collectionView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-
+                containerView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+                containerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+                
+                collectionView.topAnchor.constraint(equalTo: containerView.topAnchor),
+                collectionView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+                collectionView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
+                collectionView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+                
                 // Button View
                 microphoneButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10),
                 microphoneButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
                 microphoneButton.widthAnchor.constraint(equalToConstant: 52),
                 microphoneButton.heightAnchor.constraint(equalToConstant: 52),
-			]
-		)
-	}
+            ]
+        )
+    }
 
 	func selectedCell(row: Int) {
 		print("Row: \(row)")

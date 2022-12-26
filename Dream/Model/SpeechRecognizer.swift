@@ -62,8 +62,6 @@ class SpeechRecognizer: ObservableObject {
 
     // MARK: - Functions
 
-    
-
     func transcribe() {
         DispatchQueue(label: "Speech Recognizer Queue", qos: .background).async { [weak self] in
             guard let self = self, let recognizer = self.recognizer, recognizer.isAvailable else {
@@ -126,6 +124,7 @@ class SpeechRecognizer: ObservableObject {
 
         if let result = result {
             speak(result.bestTranscription.formattedString)
+            print("+" + transcript)
         }
     }
 
